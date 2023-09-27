@@ -1,8 +1,8 @@
-class Position {
+class position {
     constructor(x, y) {
       this.x = x;
       this.y = y;
     }
   }
 
-    export default Position;
+    export default position;
