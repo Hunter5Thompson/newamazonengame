@@ -1,5 +1,5 @@
 import React from 'react';
-import { getAllPlayers, getAllGames, deletePlayer, deleteGame } from './GameAPI'; // Pfad zu deiner API-Datei
+import { getAllPlayers, getAllGames, deletePlayer, deleteGame } from './gameAPI'; // Pfad zu deiner API-Datei
 
 const Navbar = () => {
 

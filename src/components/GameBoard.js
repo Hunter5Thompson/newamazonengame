@@ -1,4 +1,4 @@
-import Amazon from "./Figure";
+import Amazon from "./figure";
 
 
 
@@ -19,7 +19,7 @@ const Board = ({ board, validMoves, highlightValidMoves, moveAmazon }) => {
             {row.map((cell, j) => (
               <Amazon
                 key={j}
-                type={cell}
+                type={cell
                 isHighlighted={validMoves.includes([i, j])}
                 onClick={() => handleCellClick(i, j, cell)}
               />
