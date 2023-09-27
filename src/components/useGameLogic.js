@@ -1,6 +1,5 @@
 
 import { useState } from 'react';
-import * as apiService from './GameAPI';
 import Figure from './Figure';
 import Position from './Position';
 

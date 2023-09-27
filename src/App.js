@@ -1,7 +1,7 @@
 import './App.css';
-import GameSettings from './GameSettings';
-import useGameLogic from './useGameLogic';
-import Board from './GameBoard';
+import GameSettings from './components/GameSettings.js';
+import useGameLogic from './components/useGameLogic.js';
+import Board from './components/GameBoard.js';
 
 function App() {
   const { board, initializeBoard, validMoves, highlightValidMoves, moveAmazon } = useGameLogic();
