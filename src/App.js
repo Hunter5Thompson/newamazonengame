@@ -1,25 +1,17 @@
-import logo from './logo.svg';
 import './App.css';
+import GameSettings from './GameSettings';
+import useGameLogic from './useGameLogic';
+import Board from './GameBoard';
 
 function App() {
+  const { board, initializeBoard, validMoves, highlightValidMoves, moveAmazon } = useGameLogic();
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <GameSettings initializeBoard={initializeBoard} />
+      <Board board={board} validMoves={validMoves} />
+      {/* ...andere Komponenten und Logik */}
     </div>
   );
-}
+};
 
 export default App;
