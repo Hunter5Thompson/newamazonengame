@@ -4,3 +4,5 @@ class Position {
       this.y = y;
     }
   }
+
+    export default Position;

@@ -8,7 +8,7 @@ function App() {
   return (
     <div>
       <GameSettings initializeBoard={initializeBoard} />
-      <Board board={board} validMoves={validMoves} />
+      <Board board={board} validMoves={validMoves} highlightValidMoves={highlightValidMoves} moveAmazon={moveAmazon} />
       {/* ...andere Komponenten und Logik */}
     </div>
   );
