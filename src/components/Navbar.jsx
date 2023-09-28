@@ -1,5 +1,6 @@
 import React from 'react';
 import { getAllPlayers, getAllGames, deletePlayer, deleteGame } from './gameAPI'; // Pfad zu deiner API-Datei
+import './navbar.css';
 
 const Navbar = () => {
 
@@ -24,23 +25,30 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
-      <a className="navbar-brand" href="#">Amazonen</a>
-      <div className="collapse navbar-collapse" id="navbarNav">
-        <ul className="navbar-nav">
-          <li className="nav-item">
-            <a className="nav-link" href="#" onClick={handleGetAllPlayers}>Spieler</a>
-          </li>
-          <li className="nav-item">
-            <a className="nav-link" href="#" onClick={handleGetAllGames}>Spiele</a>
-          </li>
-          <li className="nav-item">
-            <a className="nav-link" href="#" onClick={() => handleDeletePlayer(1)}>Spieler Löschen</a>
-          </li>
-          <li className="nav-item">
-            <a className="nav-link" href="#" onClick={() => handleDeleteGame(1)}>Spiel Löschen</a>
-          </li>
-        </ul>
+    <nav className="navbar navbar-expand-lg fixed-top navbar-scroll">
+      <div className="container-fluid">
+        <a className="navbar-brand" href="#">Amazonen</a>
+        <button className="navbar-toggler" type="button" data-mdb-toggle="collapse"
+          data-mdb-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+          aria-label="Toggle navigation">
+          <i className="fas fa-bars"></i>
+        </button>
+        <div className="collapse navbar-collapse" id="navbarNav">
+          <ul className="navbar-nav">
+            <li className="nav-item">
+              <a className="nav-link" href="#" onClick={handleGetAllPlayers}>Spieler</a>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link" href="#" onClick={handleGetAllGames}>Spiele</a>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link" href="#" onClick={() => handleDeletePlayer(1)}>Spieler Löschen</a>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link" href="#" onClick={() => handleDeleteGame(1)}>Spiel Löschen</a>
+            </li>
+          </ul>
+        </div>
       </div>
     </nav>
   );

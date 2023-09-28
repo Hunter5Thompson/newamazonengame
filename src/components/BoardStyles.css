@@ -1,0 +1,32 @@
+.board {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 20px); /* Ändere die Größe nach Bedarf */
+    grid-gap: 1px; /* Liniendicke */
+    background-color: #000; /* Hintergrundfarbe des Boards */
+  }
+  
+  .board-row {
+    display: flex;
+  }
+  
+  .amazon {
+    width: 20px; /* Breite eines Quadrats */
+    height: 20px; /* Höhe eines Quadrats */
+    border: 5px solid #fff; /* Liniendicke und -farbe */
+  }
+  
+  /* Für das Hintergrundbild */
+  .amazonen {
+    background-image: url("../images/amazonen.png");
+    background-size: cover;
+    position: relative; /* Damit GameSettings darüber positioniert werden kann */
+  }
+  
+  /* Positioniere GameSettings über dem Hintergrundbild */
+  .game-settings {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }
+  

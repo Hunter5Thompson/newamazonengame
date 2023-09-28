@@ -1,12 +1,18 @@
+import React from 'react';
+import GameSettings from './components/gameSetting';
+import useGameLogic from './components/useGameLogic';
+import Board from './components/gameBoard';
+import Navbar from './components/navbar';
+
 import './App.css';
-import GameSettings from './components/gameSettings.js';
-import useGameLogic from './components/useGameLogic.js';
-import Board from './components/gameBoard.js';
 
 function App() {
   const { board, initializeBoard, validMoves, highlightValidMoves, moveAmazon } = useGameLogic();
   return (
-    <div>
+    <div id= "app">
+      <Navbar />
+        <div class="background"></div>
+        <div class="amazonen"></div>
       <GameSettings initializeBoard={initializeBoard} />
       <Board board={board} validMoves={validMoves} highlightValidMoves={highlightValidMoves} moveAmazon={moveAmazon} />
       {/* ...andere Komponenten und Logik */}

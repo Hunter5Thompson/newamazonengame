@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { Button, Form } from "react-bootstrap";
+import './BoardStyles.css';
 
 
 const GameSettings = ({ initializeBoard }) => {
@@ -10,23 +12,28 @@ const GameSettings = ({ initializeBoard }) => {
   };
 
   return (
-    <div>
-      <label htmlFor="boardSize">Wähle die Spielfeldgröße:</label>
-      <select id="boardSize" onChange={(e) => setSelectedSize(e.target.value)}>
-        <option value="6">6x6</option>
-        <option value="8">8x8</option>
-        <option value="10">10x10</option>
-      </select>
+    
+    <Form>
+      <Form.Group>
+        <Form.Label htmlFor="boardSize">Wähle die Spielfeldgröße:</Form.Label>
+        <select id="boardSize" onChange={(e) => setSelectedSize(e.target.value)}>
+          <option value="6">6x6</option>
+          <option value="8">8x8</option>
+          <option value="10">10x10</option>
+        </select>
+      </Form.Group>
 
-      <label htmlFor="numAmazons">Wähle die Anzahl der Amazonen pro Spieler:</label>
-      <select id="numAmazons" onChange={(e) => setSelectedAmazonCount(e.target.value)}>
-        <option value="2">2</option>
-        <option value="3">3</option>
-        <option value="4">4</option>
-      </select>
+      <Form.Group>
+        <Form.Label htmlFor="numAmazons">Wähle die Anzahl der Amazonen pro Spieler:</Form.Label>
+        <select id="numAmazons" onChange={(e) => setSelectedAmazonCount(e.target.value)}>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+        </select>
+      </Form.Group>
 
-      <button onClick={startGame}>Spiel starten</button>
-    </div>
+      <Button onClick={startGame}>Spiel starten</Button>
+    </Form>
   );
 };
 
